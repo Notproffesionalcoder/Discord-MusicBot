@@ -112,17 +112,7 @@ SlashCommand: {
               }help [Command] | Have a nice day!`
             ).setDescription(`${Commands.join("\n")}
   
-  Discord Music Bot Version: v${require("../package.json").version}
-  [✨ Support Server](${
-    client.config.SupportServer
-  }) | [GitHub](https://github.com/Notproffesionalcoder/Discord-MusicBot) | By [NotProffesionalCoder](https://github.com/Notproffesionalcoder)`);
-      if (!args) return interaction.send(Embed);
-      else {
-        let cmd =
-          client.commands.get(args[0].value) ||
-          client.commands.find((x) => x.aliases && x.aliases.includes(args[0].value));
-        if (!cmd)
-          return client.sendTime(interaction, `❌ | Unable to find that command.`);
+ 
   
         let embed = new MessageEmbed()
           .setAuthor(`Command: ${cmd.name}`, client.config.IconURL)
